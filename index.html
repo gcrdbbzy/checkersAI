@@ -1,22 +1,20 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<script src="https://d3js.org/d3.v4.min.js"></script>
-		<script src="scripts/checkers-engine.js"></script>
-	</head>
-	<body>
-		<button onclick="startGame({x: 0, y: 0}, 70, boardCanvas);">Start New Game</button>
-		<h3>You are the red side, please start by moving the red chess piece. Thanks!</h3>
-		<button id="btnReplay" style="display:none;" onclick="replayAll({x: 0, y: 0}, 70, boardCanvas)">View Replay</button><br/><br/>
-		<svg id="checkersBoard" width="640" height="640" style="margin: auto;
+  <head>
+    <title>Checkers</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <button onClick="document.location.reload()">Start New Game</button>
+    <h3>This is single player mode, please start by clicking the red piece. Thanks! </h3>
+    <div id="board" style="margin: auto;
     position: absolute;
-    top:250px;
-    left: 0;
+    top:100px;
+    left: 300px;
     right: 0;
-    bottom: 0;"></svg>
-
-		<script type="text/javascript">
-			var boardCanvas = d3.select("#checkersBoard");
-			startGame({x: 0, y: 0}, 70, boardCanvas);
-		</script>
-	</body>
+    bottom: 0;">
+    </div>
+  </body>
+  <script src="checkers.js"></script>
 </html>
